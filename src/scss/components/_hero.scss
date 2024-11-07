@@ -1,0 +1,100 @@
+.hero {
+  background-image: url("../../img/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+
+  &__content {
+    padding-top: calc(103px + 100 * ((100vw - 320px) / (1920 - 320)));
+    padding-bottom: calc(52px + 150 * ((100vw - 320px) / (1920 - 320)));
+  }
+
+
+  &__mainheading {
+    font-family: "LatoB", sans-serif;
+    font-weight: 700;
+    font-size: calc(20px + 28 * ((100vw - 320px) / (1920 - 320)));
+    text-transform: uppercase;
+    color: #3e9cdc;
+    max-width: calc(300px + 500 * ((100vw - 320px) / (1920 - 320)));
+    line-height: 120%;
+  }
+
+
+  &__mainheading-color {
+    color: var(--color-black);
+  }
+
+  &__title {
+    font-family: "LatoB", sans-serif;
+    font-weight: 700;
+    font-size: calc(14px + 6 * ((100vw - 320px) / (1920 - 320)));
+    color: var(--color-black);
+    padding-top: calc(20px + 70 * ((100vw - 320px) / (1920 - 320)));
+  }
+
+  &__list {
+    padding-top: 9px;
+  }
+
+  &__item {
+    padding-left: 25px;
+    font-family: "LatoR", sans-serif;
+    font-weight: 400;
+    font-size: calc(14px + 6 * ((100vw - 320px) / (1920 - 320)));
+    color: var(--color-black);
+    line-height: 143%;
+    background: url("../../img/defis.png") no-repeat left center;
+  }
+
+  &__btn {
+    display: flex;
+    padding-top: 78px;
+  }
+
+
+  &__link,  &__link-white {
+    font-family: "LatoR", sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 100%;
+    border-radius: 4px;
+    padding: 14.5px 58.5px;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    outline: none;
+    color: var(--color-white);
+    border: 1px solid var(--color-white);
+    background-color: var(--color-btn);
+  }
+
+  &__link-white {
+    padding: 14.5px 51px;
+    color: var(--color-temno-seryy);
+    border: 1px solid var(--color-gray);
+    background-color: var(--color-white);
+  }
+
+
+  &__link:focus-visible,
+  &__link-white:focus-visible {
+    transform: scale(1.1);
+  }
+
+  &__link:hover,
+  &__link-white:hover {
+    transform: scale(1.1);
+  }
+
+  &__link:active, &__link-white:active {
+    transform: scale(0.91);
+  }
+
+  &__link {
+    margin-right: 30px;
+  }
+
+}

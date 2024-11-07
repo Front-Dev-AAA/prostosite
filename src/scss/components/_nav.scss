@@ -1,0 +1,30 @@
+.nav {
+  display: flex;
+  flex-direction: row;
+  // padding-left: 47px;
+
+  &__list-top {
+    @include flex-v-center;
+    // margin-right: 55px;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  &__item:not(:last-child){
+      margin-right: 80px;
+  }
+
+  &__link {
+    font-family: 'TTFirsNeue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    align-items: center;
+    color: var(--light-color);
+  }
+
+
+
+}
+
+

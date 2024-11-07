@@ -1,0 +1,412 @@
+.price {
+  background: url("../../img/map.png") center/cover no-repeat, var(--color-price);
+
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: calc(43px + 80 * ((100vw - 320px) / (1920 - 320)));
+    padding-bottom: calc(50px + 54.5 * ((100vw - 320px) / (1920 - 320)));
+  }
+
+  &__title,
+  &__title-color {
+    font-family: "LatoH", sans-serif;
+    font-weight: 900;
+    font-size: calc(20px + 16 * ((100vw - 320px) / (1920 - 320)));
+    text-transform: uppercase;
+    color: var(--color-white);
+    line-height: 100%;
+    text-align: center;
+  }
+
+  &__title-color {
+    color: var(--color-btn);
+  }
+
+  &__descr {
+    text-align: center;
+    font-family: "LatoR", sans-serif;
+    font-weight: 400;
+    font-size: calc(13px + 5 * ((100vw - 320px) / (1920 - 320)));
+    color: var(--color-pale-white);
+    padding-top: 32px;
+    line-height: 100%;
+  }
+
+  &__list {
+    display: flex;
+    padding-top: 85px;
+    padding-left: 3px;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  &__item {
+    font-family: "LatoR", sans-serif;
+    font-weight: 400;
+    font-size: calc(13px + 3 * ((100vw - 320px) / (1920 - 320)));
+    text-align: center;
+    color: var(--color-white);
+    line-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 209px;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: calc(3px + 27 * ((100vw - 320px) / (1920 - 320)));
+  }
+
+  &__icon-wrapper {
+    position: relative;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__icon-descr {
+    padding-top: 20px;
+    text-align: center;
+    max-width: 190px;
+    line-height: 115%;
+  }
+
+  &__dot::after {
+    content: ".....";
+    position: absolute;
+    letter-spacing: 15px;
+    font-size: 45px;
+    color: var(--color-dote);
+    top: 26%;
+    right: -140%;
+  }
+
+  &__bottom {
+    padding-top: calc(26px + 60 * ((100vw - 320px) / (1920 - 320)));
+  }
+
+
+}
+
+
+/* форма */
+.form {
+  position: relative;
+
+  &__action {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    position: relative;
+    padding-bottom: 150px;
+  }
+
+  &__input-box {
+    position: relative;
+    width: calc(290px + 80 * ((100vw - 320px) / (1920 - 320)));
+    height: 48px;
+  }
+
+  &__input,
+  &__input::placeholder {
+    font-family: "LatoR", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--color-price);
+    line-height: 19px;
+    padding: 12px 35px 12px 5px;
+  }
+
+  &__input {
+    width: 100%;
+    border: 1px solid var(--color-white);
+    border-radius: 3px;
+    background-color: var(--color-input);
+    outline: none;
+  }
+
+  &__btn {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 16.5%;
+    border: 1px solid var(--color-white);
+    border-radius: 4px;
+    padding: 15px 10px;
+    width: calc(290px + 80 * ((100vw - 320px) / (1920 - 320)));
+    height: 48px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 15px;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--color-white);
+    background-color: var(--color-btn);
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    outline: none;
+  }
+
+  &__btn:focus-visible {
+    transform: scale(1.1);
+  }
+
+  &__btn:hover {
+    transform: scale(1.1);
+  }
+
+  &__btn:active {
+    transform: scale(0.91);
+  }
+
+  &__list {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+  }
+
+  &__announcement {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &__list-btn {
+    border-radius: 3px;
+    padding: 15px 10px;
+    width: 100%;
+    font-family: "LatoR", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--color-price);
+    line-height: 19px;
+    padding: 12px 35px 12px 5px;
+    cursor: pointer;
+    transition: all 0.5s ease-in;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    &::before {
+      vertical-align: middle;
+      font-weight: 900;
+      position: absolute;
+      right: 15px;
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-top: 1px solid var(--color-black);
+      border-right: 1px solid var(--color-black);
+      transform: rotate(135deg);
+      right: 3.7%;
+      top: 50%;
+      margin-top: -5px;
+    }
+
+    &:focus-visible {
+      outline: 0;
+    }
+
+  }
+
+  &__list-select {
+    display: block;
+    font-family: "LatoR", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 189%;
+    width: 100%;
+    text-align: left;
+    border-radius: 3px;
+    color: var(--color-white);
+    background: rgba(39, 39, 51, 1);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 40px;
+    max-height: 11rem;
+    list-style-type: none;
+    padding: 0;
+    margin-top: .1rem;
+    transform: scale(1, 0);
+    transform-origin: top left;
+    transition: all .3s ease-in;
+    pointer-events: none;
+    z-index: 2;
+    border: 1px solid #3d4050;
+
+    &.active {
+      opacity: 1;
+      transform: scale(1, 1);
+      pointer-events: auto;
+    }
+  }
+
+  &__item {
+    padding: .6rem .5rem;
+    cursor: pointer;
+    transition: all .3s ease-in;
+    position: relative;
+
+    &.active {
+      color: var(--color-select);
+    }
+  }
+
+  &__select {
+    position: relative;
+    border-radius: 3px;
+    width: calc(290px + 80 * ((100vw - 320px) / (1920 - 320)));
+    height: 48px;
+
+    .bg {
+      background-color: rgba(61, 64, 80, 0.85);
+      color: var(--color-white);
+
+      &::before {
+        border-color: transparent transparent transparent;
+        width: 8px;
+        height: 8px;
+        border-top: 1px solid var(--color-white);
+        border-right: 1px solid var(--color-white);
+        transform: rotate(-45deg);
+        z-index: 4;
+        margin-top: -1.5px
+      }
+    }
+
+
+  }
+
+  &__slider {
+    grid-column: 1/3;
+    width: 100%;
+  }
+
+  &__slider-descr {
+    display: flex;
+    justify-content: space-between;
+    font-size: calc(13px + 5 * ((100vw - 320px) / (1920 - 320)));
+    color: var(--color-white);
+    font-family: "LatoR", sans-serif;
+    font-weight: 400;
+    margin-bottom: 13px;
+  }
+
+
+}
+
+.input-system {
+  opacity: 0;
+}
+
+/* range-slider */
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 5px;
+  background: var(--color-white);
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  padding: 0;
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 4px solid var(--active-color);
+    background: var(--accent-color);
+    cursor: pointer;
+  }
+
+  &::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 4px solid var(--active-color);
+    background: var(--accent-color);
+    cursor: pointer;
+  }
+}
+
+
+// перебиваем цвет ошибки
+.just-validate-error-label {
+  position: absolute;
+  color: var(--form-error-color) !important;
+  top: 1px;
+  left: 25%;
+  font-family: "LatoR", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 14px;
+  z-index: 3;
+}
+
+// стили simplebar- кастомный скролл
+.simplebar-track.simplebar-vertical {
+  width: 7px;
+  padding-top: 7px;
+}
+
+.simplebar-scrollbar::before {
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+  background-color: #3e9cdc;
+  border-radius: 5px;
+  height: 53px;
+}
+
+// инпут для отправки файла
+.custom-file-upload {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  // padding: 12px 96px 12px 96px;
+  width: 100%;
+  height: 100%;
+  background: var(--color-white);
+  border: 2px solid var(--color-btn);
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  outline: none;
+
+  &__label {
+    padding-left: 10px;
+    font-family: "LatoSB", sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: var(--color-price);
+    cursor: pointer;
+    outline: none;
+  }
+
+  &__input {
+    display: none;
+  }
+}

@@ -1,0 +1,31 @@
+@media (max-width:450px) {
+  .header__logo svg {
+    width: 70%;
+  }
+
+  .hero__btn {
+    flex-direction: column;
+  }
+
+  .hero__link {
+    margin-right: 0;
+  }
+
+  .hero__link:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  .hero__mainheading {
+    padding-top: 10px;
+  }
+
+  .footer__center-descr {
+    display: none;
+  }
+
+  .price__list {
+    padding-top: 0;
+  }
+
+
+}

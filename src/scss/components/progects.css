@@ -1,0 +1,16 @@
+.progects {
+  background-color: var(--dark-color);
+  padding-top: 141px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 30px;
+}
+.progects__top-right {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+  background: url(../img/fuji.webp) center/cover no-repeat;
+  height: 100%;
+  width: 100%;
+}/*# sourceMappingURL=progects.css.map */

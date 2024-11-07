@@ -1,0 +1,87 @@
+@media (max-width:1200px) {
+
+  [class*="__container"] {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5px 25px;
+  }
+
+  .header__burger-btn {
+    display: block;
+  }
+
+  .menu {
+    position: absolute;
+    right: -350px;
+    top: 0;
+    width: 350px;
+    padding: 75px 20px 20px 20px;
+    background-color: rgb(103, 103, 103);
+    visibility: hidden;
+    transition: transform .5s, visibility .5s;
+    will-change: transform;
+
+    &__list {
+      display: block;
+    }
+
+    &__item:not(:last-child) {
+      margin-right: 0;
+    }
+
+    &__link {
+      color: var(--color-white);
+      font-size: 21px;
+      display: block;
+      padding: 10px;
+    }
+  }
+
+  .header.open .menu {
+    transform: translateX(-100%);
+    visibility: visible;
+  }
+
+  .price__dot::after {
+    display: none;
+  }
+
+  .price__icon-wrapper-circele {
+    width: 70%;
+  }
+
+  .price__icon {
+    width: 70%;
+  }
+
+  .price__icon-descr {
+    padding-top: 10px;
+    text-align: center;
+    max-width: 150px;
+  }
+
+  .price__item {
+    min-width: 50px;
+  }
+  .price__title {
+    padding-top: 10px;
+  }
+
+  .price__list {
+    padding-top: 30px;
+  }
+
+  .form {
+    &__action {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    &__slider {
+      grid-column: initial;
+    }
+  }
+
+
+
+}

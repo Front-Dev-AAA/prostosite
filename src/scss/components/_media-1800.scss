@@ -1,0 +1,31 @@
+@media (max-width:1800px) {
+  .footer {
+    &__container {
+      flex-direction: column;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+
+    &__descr {
+      padding: 0;
+      margin-bottom: 8px;
+    }
+
+
+    &__center {
+      margin-bottom: 8px;
+    }
+
+
+    &__social::before,
+    &__center::before {
+      display: none;
+    }
+  }
+
+
+
+
+
+
+}

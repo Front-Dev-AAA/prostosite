@@ -1,0 +1,29 @@
+@media (max-width:690px) {
+  .form {
+    &__action {
+      grid-template-columns: 1fr;
+    }
+
+    &__input-box {
+      width: calc(290px + 300 * ((100vw - 320px) / (690 - 320)));
+    }
+
+    &__select {
+      width: calc(290px + 300 * ((100vw - 320px) / (690 - 320)));
+    }
+    &__btn{
+      width: calc(290px + 300 * ((100vw - 320px) / (690 - 320)));
+    }
+
+  }
+  .price__icon-descr {
+   display: none;
+  }
+
+
+  .price__icon {
+    width: 50%;
+  }
+
+
+}
